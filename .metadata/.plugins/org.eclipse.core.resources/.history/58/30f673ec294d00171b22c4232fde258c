@@ -1,0 +1,11 @@
+
+public class Case {
+	private int x;
+	private int y;
+	
+	private String type;
+	
+	private boolean occupe;
+	
+
+}

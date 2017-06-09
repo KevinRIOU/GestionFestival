@@ -1,0 +1,6 @@
+
+public class Festival {
+	private String nom;
+	private String Emplacement;
+
+}
