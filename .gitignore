@@ -29,3 +29,6 @@
 .metadata/.plugins/org.eclipse.jdt.core/4241131739.index
 *.index
 *.xmi
+.metadata/.mylyn/.tasks.xml.zip
+.metadata/.mylyn/tasks.xml.zip
+*.xmi
