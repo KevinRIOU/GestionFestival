@@ -2,11 +2,12 @@
 public class Entree {
 	public String nom;
 	private int tarif;
-	private static int nombre_vendu;
+	private static int nombre_vendu = 0;
 	
 	public Entree(String nom, int tarif) {
 		this.nom = nom;
 		this.tarif = tarif;
+		this.nombre_vendu++;
 	}
 
 	public String getNom() {
@@ -27,7 +28,11 @@ public class Entree {
 	
 	public void ajouter_entree(String new_nom, int new_tarif)
 	{
-			
+			Entree e = new Entree("new_nom", new_tarif);
 	}
 	
+	public void reset_nombre_vendu()
+	{
+		this.nombre_vendu = 0;
+	}
 }
