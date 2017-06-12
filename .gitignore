@@ -1,0 +1,6 @@
+
+*.snap
+*.resources
+.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+.metadata/.plugins/org.eclipse.jdt.core/4241131739.index
+.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt

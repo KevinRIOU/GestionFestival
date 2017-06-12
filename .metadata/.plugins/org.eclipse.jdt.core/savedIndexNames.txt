@@ -1,5 +1,13 @@
 INDEX VERSION 1.130+C:\Users\riouk\Documents\GitHub\GestionFestival\.metadata\.plugins\org.eclipse.jdt.core
 148409970.index
+<<<<<<< HEAD
+=======
+3666609613.index
+3620471903.index
+648612256.index
+2272273464.index
+4265864773.index
+>>>>>>> 973a53224b23dbd3a3a931870ad2288cf0cb35a8
 1484906476.index
 2709225165.index
 2272273464.index
