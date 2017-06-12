@@ -1,39 +1,96 @@
+import java.util.ArrayList;
 
 public class Entree {
-	public String nom;
-	private int tarif;
-	private static int nombre_vendu = 0;
+
 	
-	public Entree(String nom, int tarif) {
-		this.nom = nom;
-		this.tarif = tarif;
-		this.nombre_vendu++;
-	}
-
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public int getTarif() {
-		return tarif;
-	}
-
-	public void setTarif(int tarif) {
-		this.tarif = tarif;
-	}
+	private ArrayList<Ticket> ticket_data;
 	
-	public void ajouter_entree(String new_nom, int new_tarif)
+	
+
+	public Entree(ArrayList<Ticket> ticket_data) {
+		this.ticket_data = ticket_data;
+	}
+
+
+	public void creer_ticket(String new_nom, double new_tarif)
 	{
-			Entree e = new Entree("new_nom", new_tarif);
-			System.out.println("Nouvelle entré créee.");
+			Ticket tick = new Ticket(new_nom, new_tarif);
+			this.getTicket_data().add(tick);
 	}
 	
-	public void reset_nombre_vendu()
+	
+	public void supprimer_ticket(String nom_ticket_a_supp)
 	{
-		this.nombre_vendu = 0;
+		boolean bool = false;
+		int i = 0;
+		while(bool == false && i < this.ticket_data.size())
+		{
+			if (this.ticket_data.get(i).getNom().equals(nom_ticket_a_supp))
+			{
+				this.ticket_data.remove(i);
+				bool = true;
+			}
+			i++;
+		}
 	}
+	
+	public void afficher_tout_les_tickets(int i)
+	{
+		System.out.println("> Nom : "+this.getTicket_data().get(i).getNom()+" Tarif : "+this.getTicket_data().get(i).getTarif()+" Vendu : "+this.getTicket_data().get(i).getNombre_vendu());
+	}
+
+
+	public int recuperer_index_ticket(String ticket_recherche)
+	{
+		boolean bool = false;
+		int i = 0;
+		while(bool == false && i < this.ticket_data.size())
+		{
+			if (this.ticket_data.get(i).getNom().equals(ticket_recherche))
+			{
+				bool = true;
+			}
+			else
+			{
+				i++;
+			}
+		}
+		return i;
+	}
+	
+	
+	
+	
+	public ArrayList<Ticket> getTicket_data() {
+		return ticket_data;
+	}
+
+
+	public void setTicket_data(ArrayList<Ticket> ticket_data) {
+		this.ticket_data = ticket_data;
+	}
+	
+	
+	public static void main(String [] args)
+	{
+		ArrayList ticket_data = new ArrayList<Ticket>();
+		Entree e = new Entree(ticket_data);
+		
+		e.creer_ticket("Test n_111", 9.99);
+		e.creer_ticket("Test n_222", 19.99);
+		e.creer_ticket("Test n_333", 15.49);
+		
+		e.getTicket_data().get(e.recuperer_index_ticket("Test n_111")).vendu();;
+		
+		e.getTicket_data().get(e.recuperer_index_ticket("Test n_222")).vendu();;
+		e.getTicket_data().get(e.recuperer_index_ticket("Test n_222")).vendu();;
+		e.getTicket_data().get(e.recuperer_index_ticket("Test n_222")).vendu();;
+		
+		
+		e.afficher_tout_les_tickets(e.recuperer_index_ticket("Test n_111"));
+		e.afficher_tout_les_tickets(e.recuperer_index_ticket("Test n_222"));
+		e.afficher_tout_les_tickets(e.recuperer_index_ticket("Test n_333"));
+	}
+	
+
 }
