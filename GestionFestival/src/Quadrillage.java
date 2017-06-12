@@ -40,7 +40,7 @@ public class Quadrillage {
 		for(int a = 0;a<taillex;a++){
 			for(int b = 0;b<tailley;b++){
 				if(quadrillage[a][b].isOccupe()){
-					System.out.print("x ");
+					System.out.print("% ");
 				}else {
 					System.out.print("o ");
 				}
