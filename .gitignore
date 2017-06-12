@@ -32,3 +32,4 @@
 .metadata/.mylyn/.tasks.xml.zip
 .metadata/.mylyn/tasks.xml.zip
 *.xmi
+/bin/
