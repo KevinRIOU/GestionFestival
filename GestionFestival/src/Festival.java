@@ -1,12 +1,12 @@
 
 public class Festival {
 	private String nom;
-	private String Emplacement;
+	private String emplacement;
 	
 	
 	public Festival(String nom, String emplacement) {
 		this.nom = nom;
-		Emplacement = emplacement;
+		this.emplacement = emplacement;
 	}
 	public String getNom() {
 		return nom;
@@ -15,10 +15,10 @@ public class Festival {
 		this.nom = nom;
 	}
 	public String getEmplacement() {
-		return Emplacement;
+		return emplacement;
 	}
 	public void setEmplacement(String emplacement) {
-		Emplacement = emplacement;
+		this.emplacement = emplacement;
 	}
 	
 	
