@@ -29,6 +29,7 @@ public class Entree {
 	public void ajouter_entree(String new_nom, int new_tarif)
 	{
 			Entree e = new Entree("new_nom", new_tarif);
+			eri
 	}
 	
 	public void reset_nombre_vendu()
