@@ -4,7 +4,11 @@ public class Quadrillage {
 	private Case[][] quadrillage;
 	private int taillex,tailley;
 	
-	public Quadrillage(int x, int y) {
+	public Quadrillage(int x, int y){
+		int z;
+		z=x;
+		x=y;
+		y=z;
 		taillex=x;
 		tailley=y;
 		quadrillage = new Case[x][y];
@@ -22,6 +26,9 @@ public class Quadrillage {
 		return result;
 	}
 	
+	public boolean isOccupe(int x, int y){
+		return this.found(x, y).isOccupe();
+	}
 	public void setOccupe(int x, int y){
 		this.found(x, y).setOccupe(true);
 	}
